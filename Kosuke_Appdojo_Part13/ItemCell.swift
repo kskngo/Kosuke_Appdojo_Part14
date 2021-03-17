@@ -8,6 +8,12 @@
 import UIKit
 
 class ItemCell: UITableViewCell {
-    @IBOutlet private(set) var checkMarkImageView: UIImageView!
-    @IBOutlet private(set) var nameLabel: UILabel!
+    @IBOutlet private var checkMarkImageView: UIImageView!
+    @IBOutlet private var nameLabel: UILabel!
+
+    func configure(fruitsItem: FruitsItem) {
+        checkMarkImageView.image
+            = fruitsItem.isChecked ? UIImage(named: "check") : nil
+        nameLabel.text = fruitsItem.name
+    }
 }
