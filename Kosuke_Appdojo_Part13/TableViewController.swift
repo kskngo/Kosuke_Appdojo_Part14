@@ -24,9 +24,7 @@ class TableViewController: UITableViewController {
             return UITableViewCell()
         }
 
-        let fruitsItem = fruitsItems[indexPath.row]
-        cell.checkMarkImageView.image = fruitsItem.isChecked ? UIImage(named: "check") : nil
-        cell.nameLabel.text = fruitsItem.name
+        cell.configure(fruitsItem: fruitsItems[indexPath.row])
 
         return cell
     }
